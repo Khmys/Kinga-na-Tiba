@@ -1,0 +1,325 @@
+from pyrogram import Client, filters
+
+from pyrogram.types import ChatPermissions
+
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, CallbackQuery
+
+bot = Client(
+
+'afya',
+
+api_id='979271',
+
+api_hash='ba5c79822456d986a855b1bb1e4aafaf',
+
+bot_token='5442790622:AAFWxspQya5JK8MQvAhNTQDVcDX0ufWTG78'
+
+)
+
+karibu = '''
+
+Ee Allaah hakika mimi nakuomba <u>afya duniani na Aakhirah </u> 🙏 **Aamiyna**
+
+Karibu Kwenye **Tiba na Afya** Kwa njia Nyepesi kabisa ya **Ruqiyah** 
+
+/afya 🩺
+
+/ruqyah
+
+/vitabu 📚
+
+/hiswnul_muslim 
+
+/zote 
+
+**Chagua na uguse**
+
+'''
+
+welcome = [
+
+[
+
+InlineKeyboardButton('Familia', callback_data='Familia'),
+
+InlineKeyboardButton('Maumivu', callback_data='Maumivu'),
+
+InlineKeyboardButton('Mgonjwa', callback_data='Mgonjwa')
+
+],
+
+[
+
+InlineKeyboardButton('Al-Faatihah', callback_data='Alfatiha'),
+
+InlineKeyboardButton('Kinga Watoto', callback_data='kinga watoto')
+
+],
+
+[InlineKeyboardButton('Jeraha au Kidonda', callback_data='Jeraha')]
+
+]
+
+Watoto = '''**Kinga ya watoto**
+
+ 
+
+ Mtume wa Allaah (Swalla Allaahu ´alayhi wa sallam) alikuwa akiwaombea kinga al-Hasan na al-Husayn (Radhiya Allaahu ´anhumaa) kwa kusema:
+
+أُعِيذُكما بِكَلِمَاتِ اللهِ التَّامَّةِ مِنْ كُل شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لامَّةٍ
+
+**1. “Ninawakinga kwa Maneno ya Allaah yaliyotimia awakinge dhidi ya kila Shaytwaan, uvamizi na kila kijicho chenye kudhuru.”
+
+<u>Kama mtoto ni mmoja</u>
+
+2. “Ninakukinga kwa Maneno ya Allaah yaliyotimia akukinge dhidi ya kila Shaytwaan, uvamizi na kila kijicho chenye kudhuru.”**
+
+Anasema:
+
+“Namna hii ndivyo baba yenu [Ibraahiym] alivyokuwa akimuombea kinga Ismaa´iyl na Ishaaq.”
+
+'''
+
+Alfatiha = '''[001 - Al-Faatihah](https://telegra.ph/Al-Faatihah-12-19)
+
+**Abu Sa´iyd al-Khudriy (Radhiya Allaahu ´anhu) amesema:**
+
+“Kundi la Maswahabah wa Mtume wa Allaah (Swalla Allaahu ´alayhi wa sallam) lilikuwa katika safari wakati walipoikaa kwenye kabila la mwarabu mmoja. Wakaomba wapokelewe kama wageni, lakini wakakataa. Mkuu wa kabila lile akawa amedungwa (na nyoka). Wakajaribu kumtibu kwa kila njia, lakini haikusaidia kitu. Baadhi yao wakasema: “Nendeni kwa lile kundi lililokuja. Huenda wana kitu.” Wakaenda na kusema: “Mkuu wetu amedungwa na nyoka. Tumejaribu kumtibu kwa kila njia, lakini haikusaidia kitu. Je, mna lolote?” Mmoja wao akasema: “Ninaapa kwa Allaah ya kwamba nina tiba, lakini ninaapa kwa Allaah ya kwamba tumewaomba mtupokee kama wageni, lakini mmkakataa. Sintowatibu mpaka mtupe ujira kwa hilo.” Wakakubaliana kundi la kondoo. Akaanza kumtemea cheche za mate na kusoma:
+
+**
+
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِیْمِ
+
+اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِیْنَۙ(۱) الرَّحْمٰنِ الرَّحِیْمِۙ(۲) مٰلِكِ یَوْمِ الدِّیْنِؕ(۳) اِیَّاكَ نَعْبُدُ وَ اِیَّاكَ نَسْتَعِیْنُؕ(۴) اِهْدِنَا الصِّرَاطَ الْمُسْتَقِیْمَۙ(۵) صِرَاطَ الَّذِیْنَ اَنْعَمْتَ عَلَیْهِمْ ﴰ غَیْرِ الْمَغْضُوْبِ عَلَیْهِمْ وَ لَا الضَّآلِّیْنَ۠(۷)
+
+**
+
+“Himdi zote ni Zake Allaah, Mola wa walimwengu.” (al-Faatihah 01 : 01)
+
+Mtu yule akawa mchangamfu kana kwamba ameachwa huru kutoka kwenye uenyekiti. Akaanza kutembea na kutohisi maumivu yoyote. Wakawapa ujira ambao walikubaliana. Baadhi yao wakasema: “Ugawiwe.” Wengine wakasema: “Msifanye lolote mpaka mtapofika kwa Mtume wa Allaah (Swalla Allaahu ´alayhi wa sallam) na kumweleza yaliyopitika, tuangalie atatuamrisha nini.” Wakafika kwa Mtume wa Allaah (Swalla Allaahu ´alayhi wa sallam) na kumweleza yaliyopitika. Akasema: “Umejua vipi kuwa [Suurah hii] inatibu?” Kisha akasema: “Mmefanya jambo la sawa. Igaweni na mnipe sehemu” na akaanza kucheka.”
+
+'''
+
+LudiMwanzo = [[InlineKeyboardButton('🔙', 'Mwanzo')]]
+
+Jeraha = '''**Jeraha**
+
+´Aaishah (Radhiya Allaahu ´anha) ameeleza kwamba wakati mtu alipokuwa na maumivu, jeraha au donda Mtume (Swalla Allaahu ´alayhi wa sallam) alikuwa akifanya namna hii – Sufyaan bin ´Uyaynah akaweka kidole chake cha shahaadah kwenye ardhi kisha akakipandisha – na kusema:
+
+بسم الله تُرْبَةُ أَرْضِنَا بريقَةِ بَعْضِنَا يُشْفي سَقِيمُنَا بإِذْنِ رَبِّنَا
+
+**“Kwa jina la Allaah. Ardhi ya nchi yetu na kwa mate ya mmoja wetu kuwaponya wagonjwa wetu kwa idhini ya Mola Wetu!”
+
+**
+
+'''
+
+Familia = '''**Familia**
+
+Mtume (Swalla Allaahu ´alayhi wa sallam) alikuwa akiwaombea kinga watu wa familia yake, akiweka mkono wa kulia juu yao na kusema:
+
+اللهم رب الناس أذهب الباس اشفه وأنت الشافي لا شفاء إلا شفاؤك شفاء لا يغادر سقما
+
+**“Ee Allaah! Mola wa walimwengu! Ondoa ugonjwa. Ponya, hakika Wewe tu ndiye Mponyaji. shari Hakuna uponyaji isipokuwa uponyaji wako tu; ponya uponyaji usioacha ugonjwa.”**
+
+'''
+
+Maumivu = '''**Maumivu**
+
+´Uthmaan bin Abiyl-´Aasw ameeleza kwamba alienda kwa Mtume wa Allaah (Swalla Allaahu ´alayhi wa sallam) na kumweleza kuhusu maumivu anayopata mwilini yanayomsumbua tokea aliposilimu. Mtume wa Allaah (Swalla Allaahu ´alayhi wa sallam) akasema: “Weka mkono wako kwenye kiungo chako unapohisi maumivu na sema mara tatu:
+
+**
+
+بِسْمِ اللهِ
+
+“Kwa jina la Allaah.........”**
+
+<u>Halafu sema mara saba:</u>
+
+**
+
+أَعُوذُ بِعِزَّةِ اللهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وأُحَاذِرُ
+
+“Ninaomba kinga kwa Ukuu na Uwezo wa Allaah dhidi ya kila shari (maumivu) ninayopata na ninayotahadharisha nayo.”**
+
+'''
+
+Mugonjwa = '''**Mgonjwa**
+
+Mtume (Swalla Allaahu ´alayhi wa sallam) amesema:
+
+“Anayemtembelea mgonjwa ambaye hajafariki na akamwambia mara saba:
+
+**
+
+أسأل الله العظيم رب العرش العظيم أن يشفيك
+
+“Ninamuomba Allaah, aliye Mtukufu, Mola wa ´Arshiy tukufu, akuponye.”**
+
+isipokuwa Allaah Atamponya.”
+
+'''
+
+@bot.on_message(filters.command(['start', 'afya']))
+
+def start(bot, message):
+
+	text = karibu	reply_markup = InlineKeyboardMarkup(welcome)
+
+	message.reply(
+
+	text=text,
+
+	reply_markup=reply_markup
+
+	)
+
+	
+
+@bot.on_callback_query()
+
+def callback_query(Client, CallbackQuery):
+
+	if CallbackQuery.data == 'Familia':
+
+ 		text1 = Familia
+
+ 		CallbackQuery.edit_message_text(
+
+ 		text1,
+
+ 		reply_markup = InlineKeyboardMarkup(LudiMwanzo)
+
+	)
+
+	
+
+	elif CallbackQuery.data == 'Mwanzo':
+
+		CallbackQuery.edit_message_text(
+
+		text = karibu,
+
+		reply_markup = InlineKeyboardMarkup(welcome)
+
+		)
+
+		
+
+	elif CallbackQuery.data == 'Maumivu':
+
+		CallbackQuery.edit_message_text(
+
+		Maumivu,
+
+		reply_markup = InlineKeyboardMarkup(LudiMwanzo)	
+
+		)
+
+		
+
+	elif CallbackQuery.data == 'Mgonjwa':
+
+		CallbackQuery.edit_message_text(
+
+		Mugonjwa,
+
+		reply_markup = InlineKeyboardMarkup(LudiMwanzo)
+
+		)
+
+		
+
+	elif CallbackQuery.data == 'Alfatiha':
+
+		CallbackQuery.edit_message_text(
+
+		text = Alfatiha, disable_web_page_preview=True,
+
+		reply_markup = InlineKeyboardMarkup(LudiMwanzo)
+
+		)
+
+		
+
+	elif CallbackQuery.data == 'kinga watoto':
+
+		CallbackQuery.edit_message_text(
+
+		Watoto,
+
+		reply_markup = InlineKeyboardMarkup(LudiMwanzo)
+
+		)
+
+		
+
+	elif CallbackQuery.data == 'Jeraha':
+
+		CallbackQuery.edit_message_text(
+
+		Jeraha,
+
+		reply_markup = InlineKeyboardMarkup(LudiMwanzo)
+
+		)
+
+@bot.on_message(filters.command('vitabu'))
+
+def vitabu(bot, msg):
+
+	bot.send_document(msg.chat.id, 'BQACAgQAAxkBAAIKKGOi4TMsIh4s-W5GlscTE70Kd8lPAAIbDQACwOpxUhJ9I5lLC4-FHgQ', caption='Qurani Tukufu')
+
+	bot.send_document(msg.chat.id, 'BQACAgQAAxkBAAIKJmOi4TNqYYL5KJTnrrnYaLYVvsEPAAI5AQACSk4OB1K3SI3mZyHXHgQ', caption='**Ukweli** kuhusu ukimwi')
+
+	
+
+@bot.on_message(filters.command('hiswnul_muslim'))
+
+def hiswnul_muslim(bot, msg):
+
+	bot.send_document(msg.chat.id, 'BQACAgUAAxkBAAIKJ2Oi4TPYtURkwtlWKjrNbdrGer6FAAIyCAACuBmIVicMtiVw2uhkHgQ', caption='Kinga Ya Muislamu')
+
+	bot.send_message(msg.chat.id, '[Kinga Ya Muislamu](https://hisnmuslim.com/i/sw/1)')
+
+	
+
+	
+
+@bot.on_message(filters.command('ruqyah'))
+
+def ruqya(bot, msg):
+
+	bot.send_audio(msg.chat.id, 'CQACAgUAAxkBAAIKg2Oi9ehgYtfZqNrTtMTPha6_M-XEAALrBgAC6jOBVcNPDqiLSZdSHgQ')
+
+	bot.send_document(msg.chat.id, 'BQACAgQAAxkBAAIKVmOi7czFeo0Iaty-7CAnPD3_UuyiAAJyDAACtFH4UqW5T4jj_bV4HgQ', caption='zip file')
+
+	
+
+@bot.on_message(filters.command('zote'))
+
+def zote(bot, sms):
+
+	bot.send_audio(sms.chat.id, 'CQACAgQAAxkBAAIKjmOi-KAWazRoXH5kP2LdV0biot1uAAImwAACLtbRURfGAo2yzs1xHgQ')
+
+	bot.send_video(sms.chat.id, 'BAACAgQAAxkBAAIKoGOi-tCM4_Qk2u_jcPGwqynG5CbdAAJuDwACeWmBUWD0VHetxiktHgQ')
+
+	bot.send_photo(sms.chat.id, 'AgACAgQAAxkBAAIKoWOi-tkwf6rG3DDnOKaRtWYXuOasAALluTEbeWmBUTPKU-M3KWruAAgBAAMCAAN5AAceBA', caption=' Maneno hayo 👆 ya ludie Kuyatamka mala 3 ** __Asbhi na jioni__ **')
+
+	bot.send_video(sms.chat.id, 'BAACAgQAAxkBAAIKsmOi_BXrsIGceDG0Pso9-gFCgmjXAAJvDwACeWmBUeNquc7DMQ5iHgQ', caption='Kidonda cha SUKALI Kitibu kwa asali')
+
+	bot.send_video(sms.chat.id, 'BAACAgQAAxkBAAIKs2Oi_Bl3XuqhnVd1juuX8I8uCmSLAAJwDwACeWmBUYnYo_mN5K11HgQ', caption='Kuwa kinga watoto asbhi na jioni')
+
+	bot.send_video(sms.chat.id, 'BAACAgQAAxkBAAIKtGOi_CGhfE5vKnetoQV4k5ph3fS_AAJ0AwAClE7UUWbg9sXlUgiYHgQ', caption='YASHAKUKUTA YA JIRANI KAMA HUYU??')
+
+	bot.send_video(sms.chat.id, 'BAACAgQAAxkBAAIKtWOi_CoAAXcmcrSVgix3JEfvfmEVFgACY1MBAAGl8IFR3gzDEZ32EWgeBA', caption='Kifua kikuu, mambukizi, dalili, Kinga na Tiba asilia')
+
+	bot.send_video(sms.chat.id, 'BAACAgQAAxkBAAIKumOi_C82j_ug7rOR-KNIiqNJQjdJAAIcVwACPVwIUsxosbkEvfRFHgQ', caption='MUUJIZA YA MATIBABU KWA MAJI YA MOTO - DOCTOR FARIS ALHAJRI')
+
+	
+
+	
+
+print('Tayari...')
+
+bot.run()
